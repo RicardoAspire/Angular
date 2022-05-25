@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Different types of input</h2>
+    <p>Input with traditional function</p>
+    <button type="button" (click)="onClickMe()">Click me!</button>
+        {{clickMessage}}
+    <hr>
+    <p>Input with keyup event</p>
+    <input (keyup)="onKey($event)">
+        <p>{{values}}</p>
+    <hr>
+    <p>Input with keyup value</p>
+    <input #box (keyup)="onKeyValue(box.value)">
+        <p>{{valuesBox}}</p>
+    <hr>
+    <p>Input with enter</p>
+    <input #boxEnter (keyup.enter)="onEnter(boxEnter.value)">
+        <p>{{valuesEnter}}</p>
+</div>

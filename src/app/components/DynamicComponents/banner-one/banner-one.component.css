@@ -1,0 +1,9 @@
+.componentOne{
+    background-color: rgb(33, 26, 75);
+    color: white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

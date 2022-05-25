@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <br>
+            The data taken from a API build with node.js at the port "http://localhost:8010/api/user", and the information is this: 
+            <h3>Name: {{users.data.first_name}} | id: {{users.data.id}}</h3>
+            <h4>Last name: {{users.data.last_name}}</h4>
+            <h4>Email: {{users.data.email}}</h4>
+            <img src="{{users.data.avatar}}" width="250px" height="200px">
+        </div>
+        <div class="col-4 mt-4">
+            <form #addUserForm="ngForm">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" [(ngModel)]="addUser.name" name="name" required>
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="text" [(ngModel)]="addUser.email" name="email" required>
+                <br>
+                <br>
+                <button (click)="addUserFunc()">Send</button>
+            </form>
+            <br>
+            <h3>Data from the server:</h3>
+            <p>Name: {{responseServer.name}}</p>
+            <p>Email: {{responseServer.email}}</p>
+        </div>
+    </div>
+</div>

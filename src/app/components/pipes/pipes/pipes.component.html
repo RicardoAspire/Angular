@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Pipe sample: Uppercase</h2>
+    <div>{{lista[0].name | uppercase}}</div>
+    <hr>
+    <h2>Pipe sample: Order by</h2>
+    <ul>
+        <li *ngFor="let movie of lista | sort">Id: {{movie.id}}, name: {{movie.name}}, price: {{movie.price}}</li>
+    </ul>
+    <hr>
+    <h2>Pipe sample: complex pipe, order with an additional input</h2>
+    <ul>
+        <li *ngFor="let movie of lista | sortBy:true">Id: {{movie.id}}, name: {{movie.name}}, price: {{movie.price}}</li>
+    </ul>
+</div>

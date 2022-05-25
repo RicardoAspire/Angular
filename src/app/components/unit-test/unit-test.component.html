@@ -1,0 +1,23 @@
+<div class="container body">
+    <h1>Form validation with unit tets</h1>
+    <p><b>{{isCheck | json}}</b></p>
+    <p><b>{{form.invalid | json}}</b></p>
+    <form [formGroup]="form" (submit)="sendLogin()" class="form">
+        <div class="form-group">
+            <label>Email</label>
+            <br>
+            <input formControlName="email" type="text">
+            <br>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <br>
+            <input formControlName="password" type="text">
+            <br>
+            <br>
+        </div>
+        <div class="form-group">
+            <button class="btn">Send</button>
+        </div>
+    </form>
+</div>
